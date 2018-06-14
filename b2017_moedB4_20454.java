@@ -1,6 +1,6 @@
 public class b2017_moedB4_20454 {
 	
-	@Question_1
+	//Question_1
 	// counts the number of "true regions" in a boolean matrix
 	public static int countTrueReg (boolean mat[][]) {
 		//calls private overloading method starting from first index
@@ -43,7 +43,7 @@ public class b2017_moedB4_20454 {
 		}
 	}
 	
-	@Question_2
+	//Question_2
 	//----------------------------------------------------------------------------
 	//searches num in the Ranges array. Return index or -1
 	//Algorithm: 1- bisective search for possible index
