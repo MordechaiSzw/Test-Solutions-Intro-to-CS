@@ -1,4 +1,4 @@
-public class Test1 {
+public class b2017_moedB4_20454 {
 	
 	// counts the number of "true regions" in a boolean matrix
 	public static int countTrueReg (boolean mat[][]) {
