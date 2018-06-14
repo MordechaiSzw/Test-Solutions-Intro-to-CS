@@ -61,7 +61,7 @@ public class b2017_moedB4_20454 {
 	     	//bisective search for possible Range obj. where num could be
 		int hi = last, lo = 0, mid;
 	    	while(lo <= hi) { // log n
-			mid = (hi + lo)/2 +1;
+			mid = (hi + lo)/2;
 			if (num <= rangeA[mid].getCenter() + rangeA[mid].getRadius() 
 			   && num >= rangeA[mid].getCenter() - rangeA[mid].getRadius())
 				return mid;
