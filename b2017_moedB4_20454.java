@@ -62,12 +62,12 @@ public class b2017_moedB4_20454 {
 		int hi = last, lo = 0, mid;
 	    	while(lo <= hi) { // log n
 			mid = (hi + lo)/2 +1;
-			if (num <= rangeA[mid].getCenter + rangeA[mid].getRadius() 
-			   && num >= rangeA[mid].getCenter - rangeA[mid].getRadius())
+			if (num <= rangeA[mid].getCenter() + rangeA[mid].getRadius() 
+			   && num >= rangeA[mid].getCenter() - rangeA[mid].getRadius())
 				return mid;
-			else if (num > rangeA[mid].getCenter + rangeA[mid].getRadius())
+			else if (num > rangeA[mid].getCenter() + rangeA[mid].getRadius())
 				lo++;
-			else if (num < rangeA[mid].getCenter - rangeA[mid].getRadius())
+			else if (num < rangeA[mid].getCenter() - rangeA[mid].getRadius())
 				hi--;
 		}//end of search - num isn't there
 	    	return -1;
