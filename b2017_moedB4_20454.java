@@ -56,11 +56,11 @@ public class b2017_moedB4_20454 {
 		//first check if num is within "absolute" range
 		int last = rangeA.length-1;
 		if (num < rangeA[0].getCenter() - rangeA[0].getRadius()
-		   || (num > rangeA[last].getCenter() + rangeA[last].getRadius())
+		   || num > rangeA[last].getCenter() + rangeA[last].getRadius())
 		    return -1;
 	     	//bisective search for possible Range obj. where num could be
 		int hi = last, lo = 0, mid;
-	    	while(lo <= hi && ) { // log n
+	    	while(lo <= hi) { // log n
 			mid = (hi + lo)/2 +1;
 			if (num <= rangeA[mid].getCenter + rangeA[mid].getRadius() 
 			   && num >= rangeA[mid].getCenter - rangeA[mid].getRadius())
