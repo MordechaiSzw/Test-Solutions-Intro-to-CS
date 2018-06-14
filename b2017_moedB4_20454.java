@@ -1,5 +1,6 @@
 public class b2017_moedB4_20454 {
 	
+	@Question_1
 	// counts the number of "true regions" in a boolean matrix
 	public static int countTrueReg (boolean mat[][]) {
 		//calls private overloading method starting from first index
@@ -41,4 +42,35 @@ public class b2017_moedB4_20454 {
 			resetReg(mat, r-1, c); //one up
 		}
 	}
+	
+	@Question_2
+	//----------------------------------------------------------------------------
+	//searches num in the Ranges array. Return index or -1
+	//Algorithm: 1- bisective search for possible index
+	//           2- calculate (using center +/- radius) if num is in the range.
+	//Time complexity: O(log n). Space complexity: O(1)
+	//----------------------------------------------------------------------------
+	public static int findNum (Range []rangeA, int num) {
+		if (rangeA == null)
+			return -1;
+		//first check if num is within "absolute" range
+		int last = rangeA.length-1;
+		if (num < rangeA[0].getCenter() - rangeA[0].getRadius()
+		   || (num > rangeA[last].getCenter() + rangeA[last].getRadius())
+		    return -1;
+	     	//bisective search for possible Range obj. where num could be
+		int hi = last, lo = 0, mid;
+	    	while(lo <= hi && ) { // log n
+			mid = (hi + lo)/2 +1;
+			if (num <= rangeA[mid].getCenter + rangeA[mid].getRadius() 
+			   && num >= rangeA[mid].getCenter - rangeA[mid].getRadius())
+				return mid;
+			else if (num > rangeA[mid].getCenter + rangeA[mid].getRadius())
+				lo++;
+			else if (num < rangeA[mid].getCenter - rangeA[mid].getRadius())
+				hi--;
+		}//end of search - num isn't there
+	    	return -1;
+	}
+	
 }
