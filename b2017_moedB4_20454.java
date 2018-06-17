@@ -66,9 +66,9 @@ public class b2017_moedB4_20454 {
 			   && num >= rangeA[mid].getCenter() - rangeA[mid].getRadius())
 				return mid;
 			else if (num > rangeA[mid].getCenter() + rangeA[mid].getRadius())
-				lo++;
+				lo = mid + 1;
 			else if (num < rangeA[mid].getCenter() - rangeA[mid].getRadius())
-				hi--;
+				hi = mid - 1;;
 		}//end of search - num isn't there
 	    	return -1;
 	}
