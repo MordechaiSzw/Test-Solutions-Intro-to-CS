@@ -5,7 +5,8 @@
 * @version 2.0
 */
 public class Test {
-  //Question 1:
+  Question 1:
+  
   public static void mirror(int[]a) 
   {
         // first print array (0 swaps)
@@ -60,9 +61,9 @@ public class Test {
   }
   
   //----------------------------------------------------------------------------------
-  //Question 2: 
+  Question 2: 
+  A:
   /*
-  * a:
   * There are more 'c' than 'a' and all the 'a' are placed before the 'c'. Thus if we are 
   * at index i and it's 'a' (i.e we know there are at least i+1 'a'), we know there are at 
   * least (i+1)*2 'c', so we can jump to index (i+1)*2. If it's not 'a', return it. Else, 
@@ -77,8 +78,8 @@ public class Test {
     return i; //there is at least 1 'c' so will give a correct answer
   }
   
+  B:
   /*
-  * b:
   * The method written in 2.a returns result = (i+1)*2, i is the last found 'a', and result
   * must be the index of 'b' or 'c'. All 'c' come after 'b', so if there is at least 1 'b',
   * it must be between i and result. So we can do a binary search between i and result, and return
@@ -107,6 +108,25 @@ public class Test {
   }
   
   //----------------------------------------------------------------------------------
-  //Question 3:
+  Question 3: (ראה עוד בממן 14 2018ב)
+  1. נכון
+  2. לא נכון - O(n^3)
+  3. נכון - (O(n*log n): binary search in every row; O(n): start from top right corner, if > val go 1 left; if <, go 1 down)
+  4. נכון-(compare to 1st num in 2nd row, if val>num continue (next row), if val< scan this and previous row; after loop scan last row)
+  5. לא נכון - (example: {{3,2},{4,4}} , test->true, what->false (3>2))
+  6. לא נכון - (example: {{1,3},{2,3}} , what->true, test->false (3>2))
+  7. נכון
+  8. לא נכון - (see 5 above for example)
+    
+  //----------------------------------------------------------------------------------
+  Question 4:
+  1. false
+  2. true (parameter is Obj.(BBB) and actual "caller" is BBB, so will call equals() from BBB)
+  3. false
+  4. false
+  5. true (a2 instanceof BBB)
+  
+  //----------------------------------------------------------------------------------
+  Question 5:
   
 }
